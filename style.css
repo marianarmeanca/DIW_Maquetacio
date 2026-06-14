@@ -1,0 +1,642 @@
+/* INICI ESTILS PRÀCTICA 9 */
+
+:root {
+  --color-principal: #2c2c2a;
+  --color-accent: #b48a4e;
+  --color-fons: #f9f7f4;
+  --color-text: #2c2c2a;
+  --color-text-suau: #5f5e5a;
+  --color-blanc: #ffffff;
+  --font-titols: 'Playfair Display', serif;
+  --font-cos: 'Lato', sans-serif;
+  --espaciat: 2rem;
+  --border-radius: 0.5rem;
+  --nav-height: 4rem;
+}
+
+*, *::before, *::after {
+  box-sizing: border-box;
+  margin: 0;
+  padding: 0;
+}
+
+html {
+  font-family: var(--font-cos);
+  font-size: 16px;
+  color: var(--color-text);
+  background-color: var(--color-fons);
+  scroll-behavior: smooth;
+}
+
+body {
+  overflow-x: hidden;
+}
+
+img {
+  display: block;
+  max-width: 100%;
+  height: auto;
+}
+
+ul {
+  list-style: none;
+}
+
+a {
+  text-decoration: none;
+  color: inherit;
+}
+
+h1, h2, h3 {
+  font-family: var(--font-titols);
+}
+
+.navbar {
+  position: fixed;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: var(--nav-height);
+  background-color: var(--color-blanc);
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  padding: 0 var(--espaciat);
+  border-bottom: 1px solid #e0ddd7;
+  z-index: 100;
+}
+
+.navbar__logo {
+  font-family: var(--font-titols);
+  font-size: 1.25rem;
+  font-weight: 700;
+  color: var(--color-accent);
+}
+
+.navbar__links {
+  display: flex;
+  gap: 2rem;
+}
+
+.navbar__links a {
+  font-size: 1rem;
+  color: var(--color-text);
+  padding-bottom: 0.2rem;
+  transition: border-bottom 0.2s;
+}
+
+.navbar__links a:hover {
+  border-bottom: 2px solid var(--color-accent);
+}
+
+.btn-reservar {
+  position: fixed;
+  bottom: 2rem;
+  right: 2rem;
+  background-color: var(--color-accent);
+  color: var(--color-blanc);
+  padding: 0.75rem 1.5rem;
+  border-radius: var(--border-radius);
+  font-size: 1rem;
+  font-weight: 700;
+  z-index: 100;
+  transition: background-color 0.2s;
+}
+
+.btn-reservar:hover {
+  background-color: var(--color-principal);
+}
+
+.header {
+  position: relative;
+  margin-top: var(--nav-height);
+  width: 100%;
+  height: 80vh;
+  overflow: hidden;
+}
+
+.header__img {
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+}
+
+.header__text {
+  position: absolute;
+  top: 50%;
+  left: 3rem;
+  transform: translateY(-50%);
+  color: var(--color-blanc);
+  text-shadow: 0 2px 8px rgba(0,0,0,0.6);
+  max-width: 30rem;
+}
+
+.header__text h1 {
+  font-size: 2.5rem;
+  margin-bottom: 0.75rem;
+}
+
+.header__text p {
+  font-size: 1.1rem;
+}
+
+main {
+  max-width: 1100px;
+  margin: 0 auto;
+  padding: 0 var(--espaciat);
+}
+
+section {
+  padding: 4rem 0;
+}
+
+section h2 {
+  font-size: 2rem;
+  margin-bottom: 2rem;
+  color: var(--color-principal);
+}
+
+.nosaltres__fila {
+  display: flex;
+  align-items: center;
+  gap: 2rem;
+  margin-bottom: 3rem;
+}
+
+.nosaltres__fila--reverse {
+  flex-direction: row-reverse;
+}
+
+.nosaltres__img {
+  width: 40%;
+  flex-shrink: 0;
+  border-radius: 50%;
+  aspect-ratio: 1 / 1;
+  object-fit: cover;
+}
+
+.nosaltres__fila p {
+  font-size: 1rem;
+  line-height: 1.8;
+  color: var(--color-text-suau);
+}
+
+
+.carta__grid {
+  display: grid;
+  grid-template-columns: 12rem 1fr; 
+  grid-template-areas:
+    "menu menu"
+    "etiq1 cont1"
+    "etiq2 cont2";
+  gap: 1rem;
+  border: 1px solid #e0ddd7;
+  border-radius: var(--border-radius);
+  overflow: hidden;
+}
+
+.carta__titol-menu {
+  grid-area: menu;
+  background-color: var(--color-fons);
+  border-bottom: 1px solid #e0ddd7;
+  padding: 1rem;
+  text-align: center;
+  font-size: 1.25rem;
+  font-family: var(--font-titols);
+}
+
+.carta__etiqueta {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  padding: 1rem;
+  background-color: var(--color-fons);
+  border-right: 1px solid #e0ddd7;
+  font-weight: 700;
+  font-size: 0.9rem;
+}
+
+.carta__etiqueta:nth-of-type(2) { grid-area: etiq1; }
+.carta__etiqueta:nth-of-type(3) { grid-area: etiq2; }
+
+.carta__contingut:nth-of-type(2) { grid-area: cont1; }
+.carta__contingut:nth-of-type(3) { grid-area: cont2; }
+
+.carta__contingut {
+  padding: 1.5rem;
+  border-top: 1px solid #e0ddd7;
+}
+
+.carta__contingut-titol {
+  font-weight: 700;
+  font-size: 1rem;
+  margin-bottom: 0.5rem;
+}
+
+.carta__contingut p {
+  font-size: 0.9rem;
+  line-height: 1.7;
+  color: var(--color-text-suau);
+  margin-bottom: 1rem;
+}
+
+.carta__imatges {
+  display: flex;
+  gap: 1rem;
+}
+
+.carta__plat {
+  position: relative;
+  flex: 1;
+  overflow: hidden;
+  border-radius: var(--border-radius);
+}
+
+.carta__plat img {
+  width: 100%;
+  height: 10rem;
+  object-fit: cover;
+  display: block;
+}
+
+.carta__plat-nom {
+  position: absolute;
+  bottom: 0;
+  left: 0;
+  width: 100%;
+  background-color: rgba(0, 0, 0, 0.5);
+  color: var(--color-blanc);
+  text-align: center;
+  padding: 0.4rem;
+  font-size: 0.9rem;
+}
+
+.galeria__grid {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 1rem;
+  justify-content: center;
+}
+
+.galeria__item {
+  width: calc(25% - 1rem);
+  aspect-ratio: 4 / 3;
+}
+
+.galeria__grid img {
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+  border: 3px solid #e0ddd7;
+  border-radius: var(--border-radius);
+  transition: filter 0.2s, border-color 0.2s;
+}
+.galeria__grid img:hover {
+  border-color: var(--color-accent);
+  filter: brightness(0.7);
+}
+
+.galeria__item:nth-child(1) img,
+.galeria__item:nth-child(4) img,
+.galeria__item:nth-child(5) img,
+.galeria__item:nth-child(8) img {
+  filter: brightness(0.7);
+}
+
+
+.reserva__form {
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  gap: 1.5rem;
+}
+
+.reserva__grup {
+  display: flex;
+  flex-direction: column;
+  gap: 0.4rem;
+}
+
+.reserva__grup label {
+  font-size: 0.9rem;
+  font-weight: 700;
+  color: var(--color-text);
+}
+
+.reserva__grup input,
+.reserva__grup textarea {
+  padding: 0.6rem 0.8rem;
+  border: 1px solid #c0bdb7;
+  border-radius: var(--border-radius);
+  font-family: var(--font-cos);
+  font-size: 1rem;
+  background-color: var(--color-blanc);
+}
+
+.reserva__grup input:focus,
+.reserva__grup textarea:focus {
+  outline: 2px solid var(--color-accent);
+  border-color: transparent;
+}
+
+.reserva__grup--full {
+  grid-column: 1 / -1;
+}
+
+.reserva__grup--dreta {
+  align-items: flex-end;
+}
+
+.reserva__boto {
+  background-color: var(--color-accent);
+  color: var(--color-blanc);
+  border: none;
+  padding: 0.75rem 2rem;
+  border-radius: var(--border-radius);
+  font-size: 1rem;
+  font-weight: 700;
+  cursor: pointer;
+  font-family: var(--font-cos);
+  transition: background-color 0.2s;
+}
+
+.reserva__boto:hover {
+  background-color: var(--color-principal);
+}
+
+.footer {
+  background-color: var(--color-principal);
+  color: var(--color-blanc);
+  display: flex;
+  align-items: center;
+  gap: 2rem;
+  padding: 1.5rem var(--espaciat);
+}
+
+.footer__logo img {
+  height: 3rem;
+  width: auto;
+}
+
+.footer__contacte {
+  display: flex;
+  align-items: center;
+  gap: 0.5rem;
+  font-size: 0.95rem;
+}
+
+.footer__contacte .material-symbols-outlined {
+  font-size: 1.25rem;
+}
+
+/*INICI ESTILS PRÀCTICA 11  */
+
+
+.galeria__item {
+  overflow: hidden; 
+}
+
+.galeria__item img {
+
+  transition: transform 0.5s ease, filter 0.5s ease;
+}
+
+
+.galeria__item img:hover {
+  transform: scale(1.1) rotate(2deg);
+  filter: grayscale(100%);
+}
+
+
+.btn-reservar {
+  transition: background-color 0.3s ease, transform 0.2s ease, color 0.3s ease;
+}
+.btn-reservar:hover {
+  background-color: var(--color-principal);
+  color: var(--color-blanc);
+  transform: scale(1.05);
+}
+
+
+/* Exercici 2 */
+.header__text h1 {
+
+  animation: aparicioTitol 3s ease-out forwards;
+}
+
+@keyframes aparicioTitol {
+  0% {
+    opacity: 0;
+    transform: translateY(30px);
+    color: var(--color-accent); 
+  }
+  50% {
+    opacity: 0.5;
+    color: var(--color-accent); 
+  }
+  100% {
+    opacity: 1;
+    transform: translateY(0);
+    color: var(--color-blanc); 
+  }
+}
+
+
+.footer__logo img {
+  animation: batecLogo 4s infinite ease-in-out;
+}
+
+@keyframes batecLogo {
+  0% { transform: scale(1); filter: brightness(1); }
+  25% { transform: scale(1.05); filter: brightness(1.15); }
+  50% { transform: scale(1); filter: brightness(1); }
+  100% { transform: scale(0.95); filter: brightness(0.9); }
+}
+
+
+/* Exercici 3 i 4*/
+.s-videos {
+  padding: var(--espaciat) 1rem;
+  text-align: center;
+  background-color: var(--color-blanc);
+}
+
+.s-videos h3 {
+  margin-bottom: 1.5rem;
+  font-size: 2rem;
+  color: var(--color-principal);
+}
+
+.video-container {
+  position: relative;
+  max-width: 700px; 
+  margin: 0 auto;
+  overflow: hidden;
+  border-radius: var(--border-radius);
+  box-shadow: 0 4px 15px rgba(0, 0, 0, 0.1);
+}
+
+.video-container video {
+  width: 100%; 
+  height: auto;
+  display: block;
+}
+
+
+.video-controller {
+  position: absolute;
+  bottom: 0;
+  left: 0;
+  right: 0;
+  background: rgba(0, 0, 0, 0.65); 
+  display: flex;
+  justify-content: center;
+  gap: 2.5rem;
+  padding: 1rem;
+  opacity: 0;
+  transition: opacity 0.3s ease;
+}
+
+
+.video-container:hover .video-controller {
+  opacity: 1;
+}
+
+
+.video-controller .material-icons {
+  color: var(--color-blanc);
+  font-size: 2.5rem;
+  cursor: pointer;
+  transition: text-shadow 0.3s ease;
+}
+
+.video-controller .material-icons:hover {
+  text-shadow: 0 0 10px #ffffff, 0 0 20px #ffffff;
+}
+
+
+
+.navbar {
+  
+  transition: padding 0.3s ease, background-color 0.3s ease, box-shadow 0.3s ease;
+}
+
+
+.navbar.shrink {
+  padding: 0.5rem 2rem; 
+  background-color: rgba(44, 44, 42, 0.98);
+  box-shadow: 0 2px 10px rgba(0, 0, 0, 0.15);
+}
+
+/* FI ESTILS PRÀCTICA 11 */
+
+/* FI ESTILS PRÀCTICA 9 / INICI ESTILS PRÀCTICA 10 */
+
+@media (max-width: 768px) {
+  .navbar {
+    padding: 0 1rem;
+  }
+
+  .navbar__links {
+    gap: 1rem;
+  }
+
+  .header__text h1 {
+    font-size: 1.8rem;
+  }
+
+  .nosaltres__fila,
+  .nosaltres__fila--reverse {
+    flex-direction: column;
+  }
+
+  .nosaltres__img {
+    width: 60%;
+    align-self: center;
+  }
+
+  
+  .carta__grid {
+    display: grid;
+    grid-template-columns: 1fr;
+    grid-template-areas:
+      "menu"
+      "etiq1"
+      "cont1"
+      "etiq2"
+      "cont2";
+  }
+
+  .carta__etiqueta {
+    border-right: none;
+    border-bottom: 1px solid #e0ddd7;
+    justify-content: flex-start;
+    padding-left: 1rem;
+  }
+
+  .galeria__item {
+  width: calc(50% - 1rem);
+  }
+
+  .footer__logo {
+    display: none;
+  }
+
+  .footer {
+    justify-content: center;
+    flex-wrap: wrap;
+  }
+}
+
+@media (max-width: 576px) {
+  .navbar__logo {
+    display: none;
+  }
+
+  .navbar {
+    justify-content: center;
+  }
+
+  .navbar__links {
+    gap: 1.5rem;
+  }
+
+  .header__text {
+    left: 1.5rem;
+  }
+
+  .header__text h1 {
+    font-size: 1.4rem;
+  }
+
+  .header__text p {
+    font-size: 0.9rem;
+  }
+
+  .nosaltres__img {
+    width: 80%;
+  }
+
+  .carta__imatges {
+    flex-direction: column;
+  }
+
+   .galeria__item {
+  width: 100%; 
+  }
+
+  .reserva__form {
+    grid-template-columns: 1fr;
+  }
+
+  .reserva__grup--full {
+    grid-column: 1;
+  }
+
+  .footer {
+    flex-direction: column;
+    align-items: center;
+    text-align: center;
+  }
+}
+
+/*FI ESTILS PRÀCTICA 10 */
