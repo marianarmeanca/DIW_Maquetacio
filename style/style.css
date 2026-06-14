@@ -1,4 +1,4 @@
-/* INICI ESTILS PRÀCTICA 9 */
+¡/* INICI ESTILS PRÀCTICA 9 */
 
 :root {
   --color-principal: #2c2c2a;
@@ -487,3 +487,153 @@ section h2 {
 }
 
 /*FI ESTILS PRÀCTICA 10 */
+.reserva__grup--full {
+    grid-column: 1;
+  }
+
+  .footer {
+    flex-direction: column;
+    align-items: center;
+    text-align: center;
+  }
+
+
+/*FI ESTILS PRÀCTICA 10 */
+.reserva__grup--full {
+    grid-column: 1;
+  }
+
+  .footer {
+    flex-direction: column;
+    align-items: center;
+    text-align: center;
+  }
+}
+
+/*FI ESTILS PRÀCTICA 10 */
+
+/*INICI ESTILS PRÀCTICA 11 */
+
+.galeria__grid .galeria__item {
+  overflow: hidden;
+}
+
+.galeria__grid img {
+  transition: transform 0.5s ease, filter 0.5s ease, border-color 0.2s;
+}
+
+.galeria__grid img:hover {
+  border-color: var(--color-accent);
+  transform: scale(1.1) rotate(2deg);
+  filter: grayscale(100%);
+}
+
+.btn-reservar {
+  transition: background-color 0.3s ease, transform 0.2s ease, color 0.3s ease;
+}
+
+.btn-reservar:hover {
+  background-color: var(--color-principal);
+  color: var(--color-blanc);
+  transform: scale(1.05);
+}
+
+.header__text h1 {
+  animation: aparicioTitol 3s ease-out forwards;
+}
+
+@keyframes aparicioTitol {
+  0% {
+    opacity: 0;
+    transform: translateY(30px);
+    color: var(--color-accent); 
+  }
+  50% {
+    opacity: 0.5;
+    color: var(--color-accent); 
+  }
+  100% {
+    opacity: 1;
+    transform: translateY(0);
+    color: var(--color-blanc); 
+  }
+}
+
+.footer__logo img {
+  animation: batecLogo 4s infinite ease-in-out;
+}
+
+@keyframes batecLogo {
+  0% { transform: scale(1); filter: brightness(1); }
+  25% { transform: scale(1.05); filter: brightness(1.15); }
+  50% { transform: scale(1); filter: brightness(1); }
+  100% { transform: scale(0.95); filter: brightness(0.9); }
+}
+
+.s-videos {
+  padding: var(--espaciat) 1rem;
+  text-align: center;
+  background-color: var(--color-blanc);
+}
+
+.s-videos h3 {
+  margin-bottom: 1.5rem;
+  font-size: 2rem;
+  color: var(--color-principal);
+}
+
+.video-container {
+  position: relative;
+  max-width: 700px; 
+  margin: 0 auto;
+  overflow: hidden;
+  border-radius: var(--border-radius);
+  box-shadow: 0 4px 15px rgba(0, 0, 0, 0.1);
+}
+
+.video-container video {
+  width: 100%; 
+  height: auto;
+  display: block;
+}
+
+.video-controller {
+  position: absolute;
+  bottom: 0;
+  left: 0;
+  right: 0;
+  background: rgba(0, 0, 0, 0.65); 
+  display: flex;
+  justify-content: center;
+  gap: 2.5rem;
+  padding: 1rem;
+  opacity: 0;
+  transition: opacity 0.3s ease;
+}
+
+.video-container:hover .video-controller {
+  opacity: 1;
+}
+
+.video-controller .material-icons {
+  color: var(--color-blanc);
+  font-size: 2.5rem;
+  cursor: pointer;
+  transition: text-shadow 0.3s ease;
+}
+
+.video-controller .material-icons:hover {
+  text-shadow: 0 0 10px #ffffff, 0 0 20px #ffffff;
+}
+
+.navbar {
+  transition: padding 0.3s ease, background-color 0.3s ease, box-shadow 0.3s ease;
+}
+
+.navbar.shrink {
+  padding: 0.5rem 2rem; 
+  background-color: rgba(44, 44, 42, 0.98);
+  box-shadow: 0 2px 10px rgba(0, 0, 0, 0.15);
+}
+
+/* FI ESTILS PRÀCTICA 11 */
