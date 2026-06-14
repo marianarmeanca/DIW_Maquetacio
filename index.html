@@ -1,0 +1,151 @@
+<!DOCTYPE html>
+<html lang="ca">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Restaurant Els Coberts</title>
+    <link rel="icon" type="image/png" href="img/favicon.png" />
+    <link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined" />
+    <link href="https://fonts.googleapis.com/css2?family=Playfair+Display:wght@400;700&family=Lato:wght@400;700&display=swap" rel="stylesheet" />
+    <link rel="stylesheet" href="style/style.css" />
+  </head>
+  <body>
+
+    <nav class="navbar">
+      <div class="navbar__logo">Els Coberts</div>
+      <ul class="navbar__links">
+        <li><a href="#nosaltres">Nosaltres</a></li>
+        <li><a href="#carta">Carta</a></li>
+        <li><a href="#galeria">Galeria</a></li>
+      </ul>
+    </nav>
+
+    <a href="#reserva" class="btn-reservar">Reservar</a>
+
+    <header class="header">
+      <img src="img/header.jpg" alt="Interior del restaurant Els Coberts" class="header__img" />
+      <div class="header__text">
+        <h1>Restaurant els <strong>Coberts</strong></h1>
+        <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit.</p>
+      </div>
+    </header>
+
+    <main>
+
+      <section id="nosaltres" class="nosaltres">
+        <h2>Sobre nosaltres</h2>
+
+        <div class="nosaltres__fila">
+          <img src="img/nosaltres1.jpg" alt="Cuiner preparant un plat" class="nosaltres__img" />
+          <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur.</p>
+        </div>
+
+        <div class="nosaltres__fila nosaltres__fila--reverse">
+          <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur.</p>
+          <img src="img/nosaltres2.jpg" alt="Sala del restaurant" class="nosaltres__img" />
+        </div>
+      </section>
+
+      <section id="carta" class="carta">
+        <h2>Carta</h2>
+
+        <div class="carta__grid">
+
+          <div class="carta__titol-menu">Menú</div>
+
+          <div class="carta__etiqueta">Menú 1</div>
+          <div class="carta__contingut">
+            <p class="carta__contingut-titol">Contingut</p>
+            <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur.</p>
+            <div class="carta__imatges">
+              <div class="carta__plat">
+                <img src="img/pasta.jpg" alt="Plat de pasta italiana" />
+                <span class="carta__plat-nom">pasta</span>
+              </div>
+              <div class="carta__plat">
+                <img src="img/entrants.jpg" alt="Assortiment d'entrants variats" />
+                <span class="carta__plat-nom">entrants</span>
+              </div>
+            </div>
+          </div>
+
+          <div class="carta__etiqueta">Menú 2</div>
+          <div class="carta__contingut">
+            <p class="carta__contingut-titol">Contingut</p>
+            <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur.</p>
+            <div class="carta__imatges">
+              <div class="carta__plat">
+                <img src="img/amanida.jpg" alt="Amanida verda mediterrània" />
+                <span class="carta__plat-nom">amanida</span>
+              </div>
+              <div class="carta__plat">
+                <img src="img/peix.jpg" alt="Plat de peix fresc cuinat al forn" />
+                <span class="carta__plat-nom">peix</span>
+              </div>
+            </div>
+          </div>
+
+        </div>
+      </section>
+
+        <section id="galeria" class="galeria">
+          <h2>Galeria d'imatges</h2>
+            <div class="galeria__grid">
+            <div class="galeria__item"><img src="img/galeria1.jpg" alt="Foto 1" /></div>
+            <div class="galeria__item"><img src="img/galeria2.jpg" alt="Foto 2" /></div>
+            <div class="galeria__item"><img src="img/galeria3.jpg" alt="Foto 3" /></div>
+            <div class="galeria__item"><img src="img/galeria4.jpg" alt="Foto 4" /></div>
+            <div class="galeria__item"><img src="img/galeria5.jpg" alt="Foto 5" /></div>
+            <div class="galeria__item"><img src="img/galeria6.jpg" alt="Foto 6" /></div>
+            <div class="galeria__item"><img src="img/galeria7.jpg" alt="Foto 7" /></div>
+            <div class="galeria__item"><img src="img/galeria8.jpg" alt="Foto 8" /></div>
+            </div>
+          </section>
+
+      <section id="reserva" class="reserva">
+        <h2>Reserva</h2>
+        <div class="reserva__form">
+          <div class="reserva__grup">
+            <label for="nom">Nom</label>
+            <input type="text" id="nom" name="nom" placeholder="El teu nom" />
+          </div>
+          <div class="reserva__grup">
+            <label for="persones">Número de persones</label>
+            <input type="number" id="persones" name="persones" min="1" placeholder="Nº persones" />
+          </div>
+          <div class="reserva__grup">
+            <label for="data">Data</label>
+            <input type="date" id="data" name="data" />
+          </div>
+          <div class="reserva__grup">
+            <label for="hora">Hora</label>
+            <input type="time" id="hora" name="hora" />
+          </div>
+          <div class="reserva__grup reserva__grup--full">
+            <label for="descripcio">Descripció</label>
+            <textarea id="descripcio" name="descripcio" rows="4" placeholder="Notes addicionals..."></textarea>
+          </div>
+          <div class="reserva__grup reserva__grup--full reserva__grup--dreta">
+            <button type="submit" class="reserva__boto">Reservar</button>
+          </div>
+        </div>
+      </section>
+
+    </main>
+
+    <footer class="footer">
+      <div class="footer__logo">
+        <img src="img/logo.png" alt="Logo Restaurant Els Coberts" />
+      </div>
+      <div class="footer__contacte">
+        <span class="material-symbols-outlined" aria-hidden="true">mail</span>
+        <span>exemple@exemple.com</span>
+      </div>
+      <div class="footer__contacte">
+        <span class="material-symbols-outlined" aria-hidden="true">call</span>
+        <span>9999999999</span>
+      </div>
+    </footer>
+
+    </body>
+</html>
